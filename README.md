@@ -1,10 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+The Board Game Chronicle
+(A platform to track played games and discuss your experience with other users)
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+Problem Statement:
+
+I need to track my thoughts about the games I play and find new games to play from other users.
+
+Target Audience: 
+
+People who want to track their board gaming habits
+All age groups
+Experienced and novice players
+Players looking for a recommendation
+
+MVP Features:
+
+User registration and login to ensure task privacy and personalized experience
+Nav bar that links to the reviews page and user profile page
+Users can post reviews for the games they play that includes the following information:
+User
+Game Name
+Review
+Rating out of 5
+Date Reviewed (auto)
+Date Played (manual)
+Game time
+Number of Players
+Users can browse through game reviews by game
+Ability for users to remove or add reviews on their profile
+
+Additional Features:
+
+List of game libraries available at local board game cafes
+Quiz with a clear set of multiple choice questions that narrows down game options in a particular venue’s library to one that is best suited to the group.
+User profile that lists the chosen games from each time the user goes through the quiz
+
+User Stories
+
+Guests (Unauthenticated Users)
+
+I want to browse the list of board games that have been reviewed so that I can explore different games available on the site
+I want to view detailed information about a board game, including its average rating, average no. players & average game duration, so that I can decide if I'm interested in it
+I want to read reviews of board games so that I can see what other players think about the games and how they are rated
+I want to register for an account so that I can participate more fully on the site, such as by writing reviews and rating games
+
+Registered Users
+
+I want to log in to my account so that I can access my profile
+I want to log out of my account when I am done using the site for security reasons
+I want to edit my profile information so that I can keep my details up to date
+I want my profile to provide me a way to keep track of the games I have played and when I played them
+I want to be able to add new games to the database
+I want to write and submit a review for a board game so that I can share my opinions with other users
+I want to rate board games on a scale (e.g., 1 to 5 stars) so that I can contribute to the overall rating of the game
+I want to edit or delete my reviews so that I can update my opinions or remove them if needed
+I want to be able to comment on other user’s reviews so I can engage in a discussion
+
+Administrator
+
+I want to add, edit, and delete reviews in the system so that I can keep the game database accurate and up to date
+I want to approve or moderate user reviews so that inappropriate content is not displayed on the site
+I want to manage user accounts, including suspending or banning users if necessary, to maintain a safe and respectful community
+I want to view site analytics, such as the number of users, reviews and comments, so that I can understand the site's performance and user engagement
+
 
 ## Gitpod Reminders
 
