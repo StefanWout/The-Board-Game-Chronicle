@@ -1,7 +1,6 @@
 The Board Game Chronicle
+
 (A platform to track played games and discuss your experience with other users)
-
-
 
 Problem Statement:
 
