@@ -1,50 +1,50 @@
-##The Board Game Chronicle
+# The Board Game Chronicle
 
 (A platform to track played games and discuss your experience with other users)
 
-Problem Statement:
+# Problem Statement:
 
 I need to track my thoughts about the games I play and find new games to play from other users.
 
-##Target Audience: 
+## Target Audience: 
 
 - People who want to track their board gaming habits
 - All age groups
 - Experienced and novice players
 - Players looking for a recommendation
 
-##MVP Features:
+## MVP Features:
 
 - User registration and login to ensure task privacy and personalized experience
 - Nav bar that links to the reviews page and user profile page
 - Users can post reviews for the games they play that includes the following information:
--- User
--- Game Name
--- Review
--- Rating out of 5
--- Date Reviewed (auto)
--- Date Played (manual)
--- Game time
--- Number of Players
+  - User
+  - Game Name
+  - Review
+  - Rating out of 5
+  - Date Reviewed (auto)
+  - Date Played (manual)
+  - Game time
+  - Number of Players
 - Users can browse through game reviews by game
 - Ability for users to remove or add reviews on their profile
 
-##Additional Features:
+## Additional Features:
 
 - List of game libraries available at local board game cafes
 - Quiz with a clear set of multiple choice questions that narrows down game options in a particular venue’s library to one that is best suited to the group.
 - User profile that lists the chosen games from each time the user goes through the quiz
 
-##User Stories
+# User Stories
 
-#Guests (Unauthenticated Users)
+## Guests (Unauthenticated Users)
 
 - I want to browse the list of board games that have been reviewed so that I can explore different games available on the site
 - I want to view detailed information about a board game, including its average rating, average no. players & average game duration, so that I can decide if I'm interested in it
 - I want to read reviews of board games so that I can see what other players think about the games and how they are rated
 - I want to register for an account so that I can participate more fully on the site, such as by writing reviews and rating games
 
-#Registered Users
+## Registered Users
 
 - I want to log in to my account so that I can access my profile
 - I want to log out of my account when I am done using the site for security reasons
@@ -56,7 +56,7 @@ I need to track my thoughts about the games I play and find new games to play fr
 - I want to edit or delete my reviews so that I can update my opinions or remove them if needed
 - I want to be able to comment on other user’s reviews so I can engage in a discussion
 
-#Administrator
+## Administrator
 
 - I want to add, edit, and delete reviews in the system so that I can keep the game database accurate and up to date
 - I want to approve or moderate user reviews so that inappropriate content is not displayed on the site
@@ -64,23 +64,6 @@ I need to track my thoughts about the games I play and find new games to play fr
 - I want to view site analytics, such as the number of users, reviews and comments, so that I can understand the site's performance and user engagement
 
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
 To log into the Heroku toolbelt CLI:
 
@@ -104,50 +87,6 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 - in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
   - replace all `<angle-bracket>` keys with your own data
 - enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
 ------
 
