@@ -1,4 +1,5 @@
 from django.db import models
+
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.contrib.auth.models import User
 
@@ -11,9 +12,9 @@ class Game(models.Model):
         return self.game_name
 
 class Reviews(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviewer')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviewer')
     title = models.CharField(max_length=200, blank=False, null=False)
-    game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='game')
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='review')
     review_text = models.TextField()
     rating = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(5)],
