@@ -1,1 +1,1 @@
-web: gunicorn board_game_chronicle.wsgi
+web: gunicorn the_board_game_chronicle.wsgi
