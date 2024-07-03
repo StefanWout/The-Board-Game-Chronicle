@@ -20,5 +20,5 @@ from review_site import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', views.test_view, name='test'),
+    path('base/', views.base_view, name='base'),
 ]
