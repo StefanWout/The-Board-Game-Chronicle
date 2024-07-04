@@ -14,3 +14,4 @@ class ReviewsAdmin(SummernoteModelAdmin):
 # Register your models here.
 admin.site.register(Comment)
 admin.site.register(Reviews)
+admin.site.register(Game)

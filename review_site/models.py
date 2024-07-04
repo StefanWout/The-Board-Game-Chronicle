@@ -9,13 +9,17 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Game(models.Model):
     game_name = models.CharField(max_length=200, blank=False, null=False)
-    description = models.TextField()
-    min_players = models.IntegerField()
-    max_players = models.IntegerField()
-    playing_time = models.IntegerField()
-    image = models.ImageField()
+    description = models.TextField(null=True)
+    min_players = models.IntegerField(null=True)
+    max_players = models.IntegerField(null=True)
+    playing_time = models.IntegerField(null=True)
+    image = models.URLField(null=True)
     def __str__(self):
         return self.game_name
+
+    class Meta:
+        verbose_name = 'Game'
+        db_table = 'game'
 
 class Reviews(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviewer')
