@@ -20,7 +20,7 @@ def post_review_view(request):
     return render(request, 'base.html')
 
 def register_view(request):
-    return
+    return render(request, 'base.html')
 
 def login_view(request):
-    return
+    return render(request, 'base.html')
