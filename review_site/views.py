@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .games_data_load import main
 
 # Create your views here.
 def base_view(request):
@@ -11,7 +12,8 @@ def reviews_page_view(request):
     return render(request, 'base.html')
 
 def games_view(request):
-    return render(request, 'base.html')
+    games_data = main()
+    return render(request, 'games.html', {'games_data': games_data})
 
 def profile_view(request):
     return render(request, 'base.html')

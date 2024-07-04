@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+
+<h1>Board Games Data</h1>
+    <ul>
+        {% for game in games_data %}
+            <li>
+                <h2>{{ game.name }}</h2>
+                <p>{{ game.description }}</p>
+                <p>Players: {{ game.min_players }} - {{ game.max_players }}</p>
+                <p>Playing Time: {{ game.playing_time }} minutes</p>
+                {% if game.image %}
+                    <img src="{{ game.image }}" alt="{{ game.name }} image" width="200">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

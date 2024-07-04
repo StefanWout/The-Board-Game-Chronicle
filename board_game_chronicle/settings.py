@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-stefanwout-theboardgame-cv01n1cpit7.ws.codeinstitute-ide.net', '.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-stefanwout-theboardgame-cv01n1cpit7.ws.codeinstitute-ide.net']
 
 # Application definition
 

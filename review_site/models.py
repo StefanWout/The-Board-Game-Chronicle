@@ -9,14 +9,18 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Game(models.Model):
     game_name = models.CharField(max_length=200, blank=False, null=False)
-
+    description = models.TextField()
+    min_players = models.IntegerField()
+    max_players = models.IntegerField()
+    playing_time = models.IntegerField()
+    image = models.ImageField()
     def __str__(self):
         return self.game_name
 
 class Reviews(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviewer')
     title = models.CharField(max_length=200, blank=False, null=False)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, null=True)
     game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='review')
     review_text = models.TextField()
     rating = models.PositiveSmallIntegerField(
