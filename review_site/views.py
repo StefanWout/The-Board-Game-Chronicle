@@ -12,8 +12,9 @@ def reviews_page_view(request):
     return render(request, 'base.html')
 
 def games_view(request):
-    games_data = main()
-    return render(request, 'games.html', {'games_data': games_data})
+    game_data = main()
+    context = {'game_data': data}
+    return render(request, 'games.html', context)
 
 def profile_view(request):
     return render(request, 'base.html')

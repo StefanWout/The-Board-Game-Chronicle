@@ -67,9 +67,9 @@ def main():
         game_details = parse_game_details(game_details_response)
         data.append(game_details)
         
-        print(f"Game Name: {game_details['name']}")
-        print(f"Game ID: {game_details['id']}")
-        print(f"Game Description: {game_details['description']}")
+        # print(f"Game Name: {game_details['name']}")
+        # print(f"Game ID: {game_details['id']}")
+        # print(f"Game Description: {game_details['description']}")
 
 if __name__=='__main__':
     main()
