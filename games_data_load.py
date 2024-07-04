@@ -45,7 +45,7 @@ def parse_game_details(xml_data):
     for game in root.findall('boardgame'):
         game_data = {
             'id': game.attrib['objectid'],
-            'name': game.find('name').text,
+            'game_name': game.find('name').text,
             'description': game.find('description').text if game.find('description') is not None else None,
             'min_players': game.find('minplayers').text if game.find('minplayers') is not None else None,
             'max_players': game.find('maxplayers').text if game.find('maxplayers') is not None else None,
@@ -77,7 +77,7 @@ def main():
         Game.objects.update_or_create(
             id=game_details['id'],
             defaults={
-                'name': game_details['name'],
+                'game_name': games[0]['name'],
                 'description': game_details['description'],
                 'min_players': game_details['min_players'],
                 'max_players': game_details['max_players'],
