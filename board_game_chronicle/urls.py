@@ -20,7 +20,7 @@ from review_site import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('base/', views.base_view, name='base'),
+    path('', views.base_view, name='base'),
     path('index/', views.index_view, name='index'),
     path('reviews/', views.reviews_page_view, name='reveiws'),
     path('games/', views.games_view, name='games'),
