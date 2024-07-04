@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from .games_data_load import main
 
 # Create your views here.
 def base_view(request):

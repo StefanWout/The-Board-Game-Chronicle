@@ -1,5 +1,12 @@
+import django
+import os
 import requests
 import xml.etree.ElementTree as ET
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'board_game_chronicle.settings')
+django.setup()
+
+from review_site.models import Game
 
 def search_game(game_name):
     search_url = f"https://boardgamegeek.com/xmlapi/search?search={game_name}&exact=1"
@@ -65,12 +72,20 @@ def main():
 
         # Parse and display game details
         game_details = parse_game_details(game_details_response)
-        data.append(game_details)
         
-        # print(f"Game Name: {game_details['name']}")
-        # print(f"Game ID: {game_details['id']}")
-        # print(f"Game Description: {game_details['description']}")
-
+        # Save to the database
+        Game.objects.update_or_create(
+            id=game_details['id'],
+            defaults={
+                'name': game_details['name'],
+                'description': game_details['description'],
+                'min_players': game_details['min_players'],
+                'max_players': game_details['max_players'],
+                'playing_time': game_details['playing_time'],
+                'image': game_details['image']
+            }
+        )
+        
 if __name__=='__main__':
     main()
 
