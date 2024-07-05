@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block body %}
+
+<body>
+    <h1>Latest Reviews</h1>
+    <ul>
+        {% for review in reviews %}
+        <a type="button" class="btn btn-secondary" href="{{review.id}}">{{ review.game }}</a>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}

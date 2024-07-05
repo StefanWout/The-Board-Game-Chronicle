@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<body>
+    <h1>{{review.title}}</h1>
+    <h2>{{review.game}}</h2>
+    <h4>{{review.user}}</h4>
+    <p>{{review.rating}}/5 Stars</p>
+    <p>{{review.game_duration}} Mins</p>
+    <p>{{review.player_count}} Players</p>
+    <p>{{review.review_text}}</p>
+    <img src="{{game.image}}" alt="game box">
+</body>
+</html>
+{% endblock %}
