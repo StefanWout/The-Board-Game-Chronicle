@@ -22,15 +22,16 @@ class GameDetail(DetailView)  :
     template_name = 'gameinfo.html'
     context_object_game = 'game'     
 
-class ReviewsPage(ListView):
+class AddReview(ListView):
     model = Review
     form_class = ReviewForm
-    template_name = 'reviews.html'
+    template_name = 'add_review.html'
     success_url = reverse_lazy('games/<int:pk>')
 
     def form_valid(self, form):
-        form.instance.user = self.request.user  # Assuming the Review model has a user field
-        return super().form_valid(form)
+        context = {'form': ReviewForm}
+        form.instance.user = self.request.user
+        return render(request, 'add_review.html', context)
 
 # def profile_view(request):
 #     return render(request, 'base.html')

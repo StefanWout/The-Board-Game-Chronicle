@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from review_site.views import Games, GameDetail, ReviewsPage
+from review_site.views import Games, GameDetail, AddReview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('games/', Games.as_view(), name='games'),
     path('games/<int:pk>/', GameDetail.as_view(), name='game detail'),
-    path('reviews/', ReviewsPage.as_view, name='reveiws'),
+    path('add_review/', AddReview.as_view(), name='add reveiw'),
 ]
    # path('summernote/', include('django_summernote.urls')),
     # path('', views.base_view, name='base'),
