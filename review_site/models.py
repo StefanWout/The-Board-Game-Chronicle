@@ -21,7 +21,7 @@ class Game(models.Model):
         verbose_name = 'Game'
         db_table = 'game'
 
-class Reviews(models.Model):
+class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviewer')
     title = models.CharField(max_length=200, blank=False, null=False)
     slug = models.SlugField(max_length=200, unique=True, null=True)
@@ -42,7 +42,7 @@ class Reviews(models.Model):
 
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    review = models.ForeignKey(Reviews, on_delete=models.CASCADE, related_name='comments')
+    review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     

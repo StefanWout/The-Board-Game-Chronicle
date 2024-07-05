@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Game, Reviews, Comment
+from .models import Game, Review, Comment
 
 # Register your models here.
 class ReviewsAdmin(SummernoteModelAdmin):
@@ -13,5 +13,5 @@ class ReviewsAdmin(SummernoteModelAdmin):
 
 # Register your models here.
 admin.site.register(Comment)
-admin.site.register(Reviews)
+admin.site.register(Review)
 admin.site.register(Game)
