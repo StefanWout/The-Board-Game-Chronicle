@@ -5,7 +5,7 @@ from .models import Review, Comment
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['game', 'title', 'slug', 'review_text', 'rating', 'date_played', 'game_duration', 'player_count']
+        fields = ['game', 'title', 'review_text', 'rating', 'date_played', 'game_duration', 'player_count']
         widgets = {'review_text': SummernoteWidget()}
 
     def __init__(self, *args, **kwargs):
