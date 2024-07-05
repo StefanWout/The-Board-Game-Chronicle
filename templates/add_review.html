@@ -2,18 +2,22 @@
 {% load static %}
 
 {% block body %}
-    <h1>Submit a Review</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-{% endblock %}
-
-{% block scripts %}
-    <script>
-        $(document).ready(function() {
-            $('#id_review_text').summernote();
-        });
-    </script>
+<h2>Add Review</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.media }}  <!-- This is for Summernote -->
+    {% for field in form %}
+        <div class="form-group">
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.help_text %}
+                <small class="form-text text-muted">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Submit Review</button>
+</form>
 {% endblock %}

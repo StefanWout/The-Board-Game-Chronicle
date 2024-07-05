@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from review_site.models import Game, Review
 from .forms import ReviewForm
 
@@ -17,30 +17,27 @@ class Games(ListView):
     #     output = Game.objects.all()
     #     print (output[0].id)
         
-class GameDetail(DetailView)  :
+class GameDetail(DetailView):
     model = Game
     template_name = 'gameinfo.html'
     context_object_game = 'game'     
 
-class AddReview(ListView):
+class AddReview(CreateView):
     model = Review
     form_class = ReviewForm
     template_name = 'add_review.html'
-    success_url = reverse_lazy('games/<int:pk>')
+    # success_url = reverse_lazy('games/<int:pk>')
 
-    def form_valid(self, form):
-        context = {'form': ReviewForm}
-        form.instance.user = self.request.user
-        return render(request, 'add_review.html', context)
+    def get(self, request, *args, **kwargs):
+        form = self.form_class()
+        return render(request, self.template_name, {'form': form})
 
-# def profile_view(request):
-#     return render(request, 'base.html')
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.save()
+            return self.form_valid(form)
+        return render(request, self.template_name, {'form': form})
 
-# def post_review_view(request):
-#     return render(request, 'base.html')
-
-# def register_view(request):
-#     return render(request, 'base.html')
-
-# def login_view(request):
-#     return render(request, 'base.html')
