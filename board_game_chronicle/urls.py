@@ -16,18 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from review_site.views import Games, GameDetail
+from review_site.views import Games, GameDetail, ReviewsPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('games/', Games.as_view(), name='games'),
-    path('games/<int:pk>/', GameDetail.as_view(), name='game detail')
-
+    path('games/<int:pk>/', GameDetail.as_view(), name='game detail'),
+    path('reviews/', ReviewsPage.as_view, name='reveiws'),
 ]
    # path('summernote/', include('django_summernote.urls')),
     # path('', views.base_view, name='base'),
     # path('index/', views.index_view, name='index'),
-    # path('reviews/', views.reviews_page_view, name='reveiws'),
+    
     #     path('profile/', views.profile_view, name='profile'),
 #     path('post/', views.post_review_view, name='post'),
 #     path('register/', views.register_view, name='register'),

@@ -2,7 +2,6 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Game, Review, Comment
 
-# Register your models here.
 class ReviewsAdmin(SummernoteModelAdmin):
 
     list_display = ('game', 'title', 'status', 'created_at')

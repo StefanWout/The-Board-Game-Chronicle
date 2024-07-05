@@ -35,7 +35,7 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     date_played = models.DateTimeField()
     game_duration = models.PositiveIntegerField(help_text="Game time in minutes")
-    player_count = models.PositiveIntegerField
+    player_count = models.PositiveIntegerField()
 
     def __str__(self):
         return f"{self.user.username}'s review of {self.game.name}"
