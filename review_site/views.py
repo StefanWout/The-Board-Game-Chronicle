@@ -20,13 +20,23 @@ class Games(ListView):
 class GameDetail(DetailView):
     model = Game
     template_name = 'gameinfo.html'
-    context_object_game = 'game'     
+    context_object_name = 'game' 
+    
+class Reviews(ListView):
+    model = Review
+    template_name = 'reviews.html' 
+    context_object_name = 'reviews'         
+
+class ReviewDetail(DetailView):
+    model = Review
+    template_name = 'reviewsinfo.html'
+    context_object_name = 'review'
 
 class AddReview(CreateView):
     model = Review
     form_class = ReviewForm
     template_name = 'add_review.html'
-    # success_url = reverse_lazy('games/<int:pk>')
+    # success_url = reverse_lazy('#')
 
     def get(self, request, *args, **kwargs):
         form = self.form_class()

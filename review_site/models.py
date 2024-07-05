@@ -32,12 +32,12 @@ class Review(models.Model):
     )
     status = models.IntegerField(choices=STATUS, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
-    date_played = models.DateTimeField()
-    game_duration = models.PositiveIntegerField(help_text="Game time in minutes")
-    player_count = models.PositiveIntegerField()
+    date_played = models.DateTimeField(null=True)
+    game_duration = models.PositiveIntegerField(null=True, help_text="Game time in minutes")
+    player_count = models.PositiveIntegerField(null=True)
 
     def __str__(self):
-        return f"{self.user.username}'s review of {self.game.name}"
+        return f"{self.user.username}'s review of {self.game.game_name}"
 
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
