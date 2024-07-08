@@ -16,22 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from review_site.views import Games, GameDetail, AddReview, Reviews, ReviewDetail
+from review_site.views import Games, GameDetail, AddReview, Reviews, ReviewDetail, Index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', Index.as_view(), name='index'),
     path('games/', Games.as_view(), name='games'),
     path('games/<int:pk>/', GameDetail.as_view(), name='game_detail'),
     path('reviews/', Reviews.as_view(), name='reviews'),
     path('reviews/<int:pk>/', ReviewDetail.as_view(), name='review'),
-    path('add_review/', AddReview.as_view(), name='add_reveiw'),
+    path('add_review/', AddReview.as_view(), name='add_review'),
     path('summernote/', include('django_summernote.urls')),
+    path("accounts/", include("allauth.urls")),
 ]
-   
-    # path('', views.base_view, name='base'),
-    # path('index/', views.index_view, name='index'),
-    
-    #     path('profile/', views.profile_view, name='profile'),
-#     path('post/', views.post_review_view, name='post'),
-#     path('register/', views.register_view, name='register'),
-#     path('login/', views.login_view, name='login'),

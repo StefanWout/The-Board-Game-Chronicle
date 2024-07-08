@@ -2,13 +2,13 @@
 {% load static %}
 
 
-{% block body %}
+{% block content %}
 
 <body>
     <h1>Latest Reviews</h1>
     <ul>
         {% for review in reviews %}
-        <a type="button" class="btn btn-secondary" href="{{review.id}}">{{ review.game }}</a>
+        <a type="button" class="btn btn-secondary" href="{{review.id}}">{{ review.game }} : {{ review.title }}</a>
         {% endfor %}
     </ul>
 </body>

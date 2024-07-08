@@ -1,4 +1,7 @@
 {% load static %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +24,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand ms-2" href="index.html">The Board Game Chronicle</a>
+        <a class="navbar-brand ms-2" href="{% url 'index' %}">The Board Game Chronicle</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,25 +32,31 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Reviews</a>
+                    <a class="nav-link" href="{% url 'reviews' %}">Reviews</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Games</a>
+                    <a class="nav-link" href="{% url 'games' %}">Games</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
+                    <a class="nav-link" href="">Profile</a>
                 </li>
+                {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Post a Review</a>
+                    <a class="nav-link" href="{% url 'add_review' %}">Post a Review</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
                 <li class="nav-item me-2">
-                    <button type="button" class="btn btn-secondary nav-link">Login</button>
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn btn-outline-light nav-link">Register</button>
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </nav>
@@ -55,12 +64,12 @@
     <!-- Main Content -->
     <main>
         <div class="container">
-            {% block body %}
+            {% block content %}
             {% endblock %}
         </div>
     </main>
 
-    <footer class="container-fluid fixed-bottom py-3">
+    <footer class="footer mt-auto py-3">
         <div class="row">
             <!-- Footer title and copywrite -->
             <div class="container text-center col-sm-4">
