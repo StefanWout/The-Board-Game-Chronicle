@@ -13,6 +13,7 @@ class Game(models.Model):
     max_players = models.IntegerField(null=True)
     playing_time = models.IntegerField(null=True)
     image = models.URLField(null=True)
+    local_image_path = models.CharField(max_length=500, null=True, blank=True)
     def __str__(self):
         return self.game_name
 
