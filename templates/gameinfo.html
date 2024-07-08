@@ -2,13 +2,24 @@
 {% load static %}
 
 {% block content %}
-<body>
-    <h1>{{game.game_name}}</h1>
-    <p>{{game.description}}</p>
-    <p>{{game.min_players}} - {{game.max_players}} Players</p>
-    <p>Average time: {{game.playing_time}} mins</p>
-    <img src="{{game.image}}" alt="game box">
-    <a href="#" type="button" class="btn btn-primary">Add Review</a>
-</body>
-</html>
+    <body>
+        <h1>{{ game.game_name }}</h1>
+        <p>{{ game.description }}</p>
+        <p>{{ game.min_players }}
+            -
+            {{ game.max_players }}
+            Players</p>
+        <p>Average time:
+            {{ game.playing_time }}
+            mins</p>
+        <img src="{{ game.image }}" alt="game box">
+            <a href="{% url 'add_review' %}" type="button" class="btn btn-primary">Add Review</a>
+            <p>Previous Reviews</p>
+            <ul>
+                {% for review in reviews %}
+                    <a type="button" class="btn btn-secondary" href="{{ review.id }}">{{ review.title }}</a>
+                {% endfor %}
+            </ul>
+        </body>
+    </html>
 {% endblock %}
