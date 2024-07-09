@@ -25,15 +25,36 @@ class GameDetail(DetailView):
     template_name = 'gameinfo.html'
     context_object_name = 'game' 
     
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Add data from the Review model to the context
+        context['reviews'] = Review.objects.filter(game=self.object)
+        return context
+
 class Reviews(ListView):
     model = Review
-    template_name = 'reviews.html' 
+    template_name = 'reviews.html'
     context_object_name = 'reviews'         
 
 class ReviewDetail(DetailView):
     model = Review
     template_name = 'reviewsinfo.html'
     context_object_name = 'review'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        review = self.get_object()
+        game = review.game 
+        context['game'] = game 
+        return context
+
+    def get_object(self):
+        game_id = self.kwargs.get('pk')
+        review_id = self.kwargs.get('review_id')
+        try:
+            return Review.objects.get(pk=review_id, game_id=game_id)
+        except Review.DoesNotExist:
+            raise Http404("No review found matching the query")
 
 class AddReview(CreateView):
     model = Review
