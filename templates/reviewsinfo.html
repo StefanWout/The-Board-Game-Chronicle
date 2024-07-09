@@ -11,6 +11,10 @@
     <p>{{review.player_count}} Players</p>
     <p>{{review.review_text}}</p>
     <img src="{{ game.image }}" alt="game box" class="image-box">
+
+    {% if user.is_authenticated and user.id == review.user.id %}
+    <a type="button" class="btn btn-primary" href="{% url 'edit_review' review.id %}">Edit</a>
+    {% endif %}
 </body>
 </html>
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
-from django.views.generic import ListView, DetailView, CreateView, TemplateView
+from django.views.generic import ListView, DetailView, CreateView, TemplateView, UpdateView
 from review_site.models import Game, Review, Comment, User
 from django.contrib.auth.models import User
 from .forms import ReviewForm
@@ -49,14 +49,6 @@ class ReviewDetail(DetailView):
         context['game'] = game 
         return context
 
-    # def get_object(self):
-    #     game_id = self.kwargs.get('pk')
-    #     review_id = self.kwargs.get('review_id')
-    #     try:
-    #         return Review.objects.get(pk=review_id, game_id=game_id)
-    #     except Review.DoesNotExist:
-    #         raise Http404("No review found matching the query")
-
 class AddReview(CreateView):
     model = Review
     form_class = ReviewForm
@@ -92,3 +84,18 @@ class ProfileView(DetailView):
         # Add data from the Review model to the context
         context['reviews'] = Review.objects.filter(user=user)
         return context
+
+class EditReview(UpdateView):
+    model = Review
+    template_name = 'edit_review.html'
+    form_class = ReviewForm 
+    def get_success_url(self):
+        # Redirect to the profile page of the user who edited the review
+        user_id = self.object.user.pk
+        return reverse('profile', kwargs={'pk': user_id})
+
+def delete_recipe(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    post.delete()
+    return redirect(reverse(
+        'your_recipes'))

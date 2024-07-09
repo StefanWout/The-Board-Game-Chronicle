@@ -35,7 +35,8 @@ p {
 }
 
 .image-box {
-    width: 50%; /* Adjust percentage as needed */
+    width: 100%; /* Adjust percentage as needed */
     max-width: 300px; /* Limit maximum width */
     height: auto; /* Maintain aspect ratio */
 }
+
