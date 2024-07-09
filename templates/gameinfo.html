@@ -17,7 +17,7 @@
             <h2>Previous Reviews</h2>
             <ul>
                 {% for review in reviews %}
-                    <a type="button" class="btn btn-secondary" href="{% url 'game_to_review_path' game.pk review.id %}">{{ review.title }} : {{ review.rating }} / 5 stars</a>
+                    <a type="button" class="btn btn-secondary" href="{% url 'review' review.id %}">{{ review.title }} : {{ review.rating }} / 5 stars</a>
                 {% endfor %}
             </ul>
         </body>

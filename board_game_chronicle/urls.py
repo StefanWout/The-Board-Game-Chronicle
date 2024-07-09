@@ -23,7 +23,6 @@ urlpatterns = [
     path('', Index.as_view(), name='index'),
     path('games/', Games.as_view(), name='games'),
     path('games/<int:pk>/', GameDetail.as_view(), name='game_detail'),
-    path('games/<int:pk>/<int:review_id>/', ReviewDetail.as_view(), name='game_to_review_path'),
     path('reviews/', Reviews.as_view(), name='reviews'),
     path('reviews/<int:pk>/', ReviewDetail.as_view(), name='review'),
     path('add_review/', AddReview.as_view(), name='add_review'),

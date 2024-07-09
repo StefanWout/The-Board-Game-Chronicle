@@ -49,13 +49,13 @@ class ReviewDetail(DetailView):
         context['game'] = game 
         return context
 
-    def get_object(self):
-        game_id = self.kwargs.get('pk')
-        review_id = self.kwargs.get('review_id')
-        try:
-            return Review.objects.get(pk=review_id, game_id=game_id)
-        except Review.DoesNotExist:
-            raise Http404("No review found matching the query")
+    # def get_object(self):
+    #     game_id = self.kwargs.get('pk')
+    #     review_id = self.kwargs.get('review_id')
+    #     try:
+    #         return Review.objects.get(pk=review_id, game_id=game_id)
+    #     except Review.DoesNotExist:
+    #         raise Http404("No review found matching the query")
 
 class AddReview(CreateView):
     model = Review
