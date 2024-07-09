@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from review_site.views import Games, GameDetail, AddReview, Reviews, ReviewDetail, Index
+from review_site.views import Games, GameDetail, AddReview, Reviews, ReviewDetail, Index, ProfileView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +29,5 @@ urlpatterns = [
     path('add_review/', AddReview.as_view(), name='add_review'),
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
+    path("profile/<int:pk>", ProfileView.as_view(), name = 'profile'),
 ]

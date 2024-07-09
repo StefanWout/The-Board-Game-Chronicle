@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, TemplateView
-from review_site.models import Game, Review, Comment
+from review_site.models import Game, Review, Comment, User
+from django.contrib.auth.models import User
 from .forms import ReviewForm
 
 # Create your views here.
@@ -75,21 +76,19 @@ class AddReview(CreateView):
             return self.form_valid(form)
         return render(request, self.template_name, {'form': form})
 
-# class RegisterView(CreateView):
-#     model = UserWarning
-#     form_class = RegisterForm
-#     template_name = 'register.html'
-#     # success_url = reverse_lazy('#')
+class ProfileView(DetailView):
+    model = User
+    template_name = 'profile.html'
+    context_object_name = 'profile'
 
-#     def get(self, request, *args, **kwargs):
-#         form = self.form_class()
-#         return render(request, self.template_name, {'form': form})
+    def get_object(self, queryset=None):
+        # Get the User object based on the 'pk' or 'slug' captured in the URL
+        pk = self.kwargs.get('pk')
+        return get_object_or_404(User, pk=self.kwargs['pk'])
 
-#     def post(self, request, *args, **kwargs):
-#         form = self.form_class(request.POST)
-#         if form.is_valid():
-#             review = form.save(commit=False)
-#             review.user = request.user
-#             review.save()
-#             return self.form_valid(form)
-#         return render(request, self.template_name, {'form': form})
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.object
+        # Add data from the Review model to the context
+        context['reviews'] = Review.objects.filter(user=user)
+        return context
