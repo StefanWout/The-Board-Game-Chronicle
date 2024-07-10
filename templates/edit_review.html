@@ -13,10 +13,10 @@
     
     <div class="row">
        <div class="col mt-3 text-center">
-          <form method="post" enctype="multipart/form-data">
+          <form method="post" enctype="multipart/form-data" id="reviewForm">
              {% csrf_token %}
              {{ form.as_p}}
-             <button class="btn btn-success right mb-2" type="submit" >Edit Review <i class="fas fa-edit ml-3"></i></button>
+             <button class="btn btn-success right mb-2" type="submit" id="submitButton">Edit Review <i class="fas fa-edit ml-3"></i></button>
              <span>
                <a href="{% url 'delete_review' review.id %}" class="btn btn-danger">Delete</a>
             </span>
@@ -25,4 +25,6 @@
     </div>
  </div>
 {% endif %}
-{%endblock%}
+{% endblock %}
+
+<script src="{% static 'js/edit_review.js' %}"></script>

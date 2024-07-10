@@ -3,6 +3,7 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, TemplateView, UpdateView
 from django.views.generic.edit import DeleteView
 from review_site.models import Game, Review, Comment, User
+from django.contrib import messages
 from django.contrib.auth.models import User
 from .forms import ReviewForm
 
@@ -88,15 +89,41 @@ class ProfileView(DetailView):
 
 class EditReview(UpdateView):
     model = Review
+    form_class = ReviewForm
     template_name = 'edit_review.html'
-    form_class = ReviewForm 
-    
+    context_object_name = 'review'
+
+    def get_success_url(self):
+        return reverse('review', args=[self.object.id])
+
+    def form_valid(self, form):
+        if form.instance.user != self.request.user:
+            messages.add_message(self.request, messages.ERROR, 'You are not authorized to edit this review!')
+            return redirect('review', pk=self.object.pk)
+        review = form.save(commit=False)
+        review.approved = False
+        review.save()
+        messages.add_message(self.request, messages.SUCCESS, 'Review Updated!')
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.add_message(self.request, messages.ERROR, 'Error updating review!')
+        return super().form_invalid(form)
 
 class DeleteReview(DeleteView):
     model = Review
-    template_name = 'edit_review.html'
+    template_name = 'confirm_delete.html'
+    context_object_name = 'review'
     
     def get_success_url(self):
-        # Redirect to the profile page of the user who edited the review
-        user_id = self.object.user.pk
-        return reverse('profile', kwargs={'pk': user_id})
+        user_pk = self.request.user.pk  # Get the current user's pk
+        messages.success(self.request, 'Review deleted!')
+        return reverse('profile', kwargs={'pk': user_pk})
+    
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.user == request.user:
+            return super().delete(request, *args, **kwargs)
+        else:
+            messages.error(request, 'You can only delete your own reviews!')
+            return HttpResponseRedirect(reverse_lazy('profile'))
