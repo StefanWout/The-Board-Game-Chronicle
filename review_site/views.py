@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, TemplateView, UpdateView
+from django.views.generic.edit import DeleteView
 from review_site.models import Game, Review, Comment, User
 from django.contrib.auth.models import User
 from .forms import ReviewForm
@@ -89,13 +90,13 @@ class EditReview(UpdateView):
     model = Review
     template_name = 'edit_review.html'
     form_class = ReviewForm 
+    
+
+class DeleteReview(DeleteView):
+    model = Review
+    template_name = 'edit_review.html'
+    
     def get_success_url(self):
         # Redirect to the profile page of the user who edited the review
         user_id = self.object.user.pk
         return reverse('profile', kwargs={'pk': user_id})
-
-def delete_recipe(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
-    post.delete()
-    return redirect(reverse(
-        'your_recipes'))

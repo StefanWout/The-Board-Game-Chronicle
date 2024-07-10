@@ -17,6 +17,9 @@
              {% csrf_token %}
              {{ form.as_p}}
              <button class="btn btn-success right mb-2" type="submit" >Edit Review <i class="fas fa-edit ml-3"></i></button>
+             <span>
+               <a href="{% url 'delete_review' review.id %}" class="btn btn-danger">Delete</a>
+            </span>
           </form>
        </div>
     </div>

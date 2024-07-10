@@ -9,7 +9,7 @@
     <p>{{review.rating}}/5 Stars</p>
     <p>{{review.game_duration}} Mins</p>
     <p>{{review.player_count}} Players</p>
-    <p>{{review.review_text}}</p>
+    <p>{{review.review_text|safe}}</p>
     <img src="{{ game.image }}" alt="game box" class="image-box">
 
     {% if user.is_authenticated and user.id == review.user.id %}
