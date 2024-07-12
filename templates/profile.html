@@ -3,14 +3,20 @@
 {% if user.is_authenticated}
 
 {% block content %}
-
-
+<div class="container mt-4">
+    <div class="row" style="align-items: center;">
     {% for review in reviews %}
-        <a type="button" class="btn btn-secondary" href="{% url 'review' review.id %}">{{ review.game }} : {{ review.title }}
-            :
-            {{ review.rating }}
-            / 5 stars</a>
+            <div class="card card-wrapper" style="width: 18rem;">
+                <img src="{{ review.game.image }}" class="card-img-top" style="max-height: 20rem;" alt="game-box">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ review.game }} : {{review.title}}</h5>
+                        <p class="card-text">{{ review.rating }}<i class="fas fa-star"></i></p>
+                        <p class="card-text">{{ review.review_text|safe|linebreaksbr|slice:":100" }}</p>
+                        <a href="{{review.id}}" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
     {% endfor %}
-
+</div>
+</div>
 
 {% endblock %}

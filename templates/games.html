@@ -8,7 +8,7 @@
     <div class="row">
         {% for game in games %}
             <div class="card card-wrapper" style="width: 18rem;">
-                <img src="{{ game.image }}" class="card-img-top" alt="game-box">
+                <img src="{{ game.image }}" class="card-img-top" style="max-height: 20rem;" alt="game-box">
                     <div class="card-body">
                         <h5 class="card-title">{{ game.game_name }}</h5>
                         <p class="card-text">{{ game.description|linebreaksbr|slice:":100" }}</p>
