@@ -67,20 +67,32 @@ I need users to be able to track what they play at my cafe so that the data can 
 ### Home Page
 ![1](url)
 
-### (Logged in) Browse books
+### (Logged in) Profile
 ![1](url)
 
-### Add a Book
-![Add a book wireframe](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/c0379553-0906-4d77-aca6-beb8fc6834d9)
+### Post a Review
+![Add a Review wireframe]()
 
-### Book Detail Page
+### Reviews Page
 
-![Book Details Wireframe](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/467fa65e-eb66-4b21-94af-f9090b6a54ab)
+![Reviews Wireframe]()
+
+### Review Detail Page
+
+![Review Details Wireframe]()
+
+### Games Page
+
+![Games Wireframe]()
+
+### Games Detail Page
+
+![Games Details Wireframe]()
 
 ## Agile:
-This project was created using Agile principles via a projectboard on Github. This is the first time I have implemented Agile as an individual developer. However, creating user stories and identifying accepterance criteria acted as a roadmap to target the various features and functionalities of the application. It helped me stay on track and reduced distractions.
+Through the use of the kanban board functionality on github i was able to track my progress and outline clear goals to make sure I was staying on track. With hindsight, I would have added more granularity to the board as many of the tasks listed could have been broken down further,
 
-![project board](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/98b7d24d-7234-4155-af15-df72403659f9)
+![project board]()
 
 
 # Design Choices:
@@ -96,11 +108,7 @@ This project was created using Agile principles via a projectboard on Github. Th
 The colours were selected with the intention of not pulling focus from the cards on the page.
 
 ## Typography:
- The following fonts were chosen for a clean and modern look that is both readable and minimal.
-
-Varta
-
-Goudy Book Letter 1911
+The default fonts provided ideal clarity
 
 
 ## Priority Features:
@@ -132,84 +140,97 @@ Registration is simple and only requires the user to provde a username, email an
 
 ![reviews]()
 
+
+#### Post a Review:
+
+![add a Review]()
+
+
+The form allows users to easily add the relevant information about their play session here. This data will allow future visitors to make an informed decision about what games to play based on prior experiences. 
+
 #### Games:
 
 ![games]()
 
+#### Game Details:
 
-#### posst a Review:
+![game detail]()
 
-![add a book](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/8e15c1d9-193f-4032-b147-0969c3b45bab)
-
-
-The form allows users to easily add a book to the library which will then be visible on the  books page for the users to browse. Users are also able to edit and delete a book they themselves have added giving them full control over their own contributions.
-
-
-#### Book Details:
-
-![book detail](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e88f0274-670b-4a76-8ef8-7c44a5f440a7)
-
-Users are able to find more information about the book they are interested in. The book details include the title, author and a brief summary of the book along with an book cover image. This provides users with sufficient information about the book.
+All the information found here, including the image were pulled from the boardgamegeek.com open api and saved in the Game model. The python script ran once and pull all the data for the specific list of games in the cafe's library (games_data_load.py). Adding games to the model from the api would require a change in the list of games being called in the main function. The admin can add games manually as an alternative, especially if they disagree with the information provided by boardgamegeek.com. 
 
 #### Footer:
 
-![footer](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/fde543e6-0ee2-4c17-b8a8-436d4e824f4d)
+![footer]()
 
 Links in the footer redirect to respective social media pages. 
-It allows users to stay connected with the The Book Booth on social media platforms, keeping them informed about any changes that may occur over time.
+It allows users to stay connected with the The Board Game Chronicle on social media platforms, keeping them informed about any changes that may occur over time.
 
 
 # Future Features:
 
-* Implement a review system so readers can share their thoughts about books that they have completed. This will give others a better idea of whether the book is a good fit for them. 
-* Display if a book is available with a status (Available, Not Available).
-*  Allow users to reserve a book beforehand.
-* A search engine where users can search for books by title, author and genre.
-* Provide locations of nearest libraries.
+* Implement a comment system so users can share their thoughts about games that they chose based on previous reviews. 
+* Robust review search and filtration.
+* Allow users to furhter customize their profile.
+* A quiz that can narrow down the list of games to one best suited to the group.
+* Provide news and promotional info from the cafe.
 * Provide a way for the users to engage and form a secure community.
-* Include an about page to inform others of how The Book Booth Library works and how to use it.
+
 
 
 Database Design:
 
-![ERD](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/6db92c85-0b4c-485c-b60d-709df3fb963e)
+![ERD]()
 
 
-Entity Relationship Diagrams (ERD) help the developer to make connections between databases and information. Creating an ERD helped me understand how the tables relate to one another. I used LucidChart to create the diagram and the arrow represent how the data fields relate to one another.
+Entity Relationship Diagrams (ERD) helped me understand the M in MVC framework much better. Despite not building on the comment model, having it included in the innitial planning will make it easier to implement in future. I used dbdiagram.io to create the diagram.
 
 
 ## Data Models:
 
 
-| Book   |            |   |
-|----------|:-------------:|------:|
-| Title |  CharField |  |
-| Author |  CharField   |   FK |
-| ISBN | CharField |     |
-| User |  CharField | FK |
-| Genre |  CharField   |   FK |
-| Language | CharField |  FK   |
-| Summary |  TextField |  |
+Table user {
+  id integer [primary key]
+  username varchar
+  email emailfield 
+  password varchar
+}
 
+Table reviews {
+  id integer [primary key]
+  user_id integer
+  game_id integer
+  title text
+  review_text text [note: 'Content of the post']
+  rating integer [note: '1-5 stars']
+  created_at timestamp
+  date_played timestamp
+  game_duration integer
+  player_count integer
+}
 
+Table comments {
+  id integer [primary key]
+  user_id integer
+  review_id integer
+  body text [note: 'Content of the comment']
+  created_at timestamp 
+}
 
-| Genre   |            |   |
-|----------|:-------------:|------:|
-| Category |  CharField | FK |
+Table gamesG {
+  id integer [primary key]
+  game_name text
+  game_description text
+  min_players integer
+  max_players integer
+  playing_time integer
+  image image
+}
 
-
-| Language   |            |   |
-|----------|:-------------:|------:|
-| Language |  CharField | FK  |
-
-| Author  |            |   |
-|----------|:-------------:|------:|
-| Name |  CharField | FK  |
 
 ## User Flow Chart:
-![The Book Booth Flowchart](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/7727f007-8e2e-45fc-b955-57e2d50d1e98)
+![Flowchart](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/7727f007-8e2e-45fc-b955-57e2d50d1e98)
 
-The Flowchart served as an efficient way to make important decisions when creating the app. It helped me narrow down which decisions were important for the users and admin as well as establishing the appropriate authentication. It also helped me decide which features were the most important i.e adding a book and viewing a list of books that are available to borrow at The Book Booth Library.
+The flowchart helped me track a user journey through the site, allowing me to be sure that they would have access to all fucntionality no matter where they ended up.
 
 # Validation
 ## HTML
