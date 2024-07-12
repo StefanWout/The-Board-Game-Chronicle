@@ -64,8 +64,8 @@ I need users to be able to track what they play at my cafe so that the data can 
 - I want to view site analytics, such as the number of users, reviews and comments, so that I can understand the site's performance and user engagement
 
 ## Wireframe & Initial Design:
-### Home Page
-![1](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Data%20Schema.png)
+### Home Page and Review Page, innitial design ideation
+![1](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Home%20and%20Review%20page%20wireframe.png)
 
 ### (Logged in) Profile
 ![1](url)
