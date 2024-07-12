@@ -58,7 +58,9 @@ class AddReview(CreateView):
     model = Review
     form_class = ReviewForm
     template_name = 'add_review.html'
-    success_url = reverse_lazy('reviews')
+    
+    def get_success_url(self):
+        return reverse('profile', kwargs={'pk': self.request.user.pk})
 
     def get(self, request, *args, **kwargs):
         form = self.form_class()

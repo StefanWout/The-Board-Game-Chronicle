@@ -3,6 +3,8 @@
 {% if user.is_authenticated}
 
 {% block content %}
+
+<h1 style="text-align: center; margin-top: 5rem;">Your Reviews</h1>
 <div class="container mt-4">
     <div class="row" style="align-items: center;">
     {% for review in reviews %}
@@ -12,7 +14,8 @@
                         <h5 class="card-title">{{ review.game }} : {{review.title}}</h5>
                         <p class="card-text">{{ review.rating }}<i class="fas fa-star"></i></p>
                         <p class="card-text">{{ review.review_text|safe|linebreaksbr|slice:":100" }}</p>
-                        <a href="{{review.id}}" class="btn btn-primary">Details</a>
+                        <p class="card-text">{{ review.date_played }}</p>
+                        <a href="{% url 'review' review.id %}" class="btn btn-primary">Details</a>
                     </div>
                 </div>
     {% endfor %}
