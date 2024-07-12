@@ -1,0 +1,45 @@
+/* COLOR PALETTE
+burgandy - #780D0D
+mint - #1FC18E
+black - #171414
+white - #D6D9D7 */
+
+
+.navbar {
+    background-color: #D6D9D7;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #780D0D 10%);
+}
+
+.navbar .nav-link {
+    color:#D6D9D7 !important;
+}
+
+.navbar .navbar-brand {
+    color: #D6D9D7;
+}
+
+body {
+    background-color: #D6D9D7;
+}
+
+p {
+    color: #171414;
+}
+
+.footer-nav-link {
+    color: #1FC18E;
+}
+
+#footer-text {
+    color: #171414;
+}
+
+.image-box {
+    width: 100%; /* Adjust percentage as needed */
+    max-width: 300px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card-wrapper {
+    margin: 20px; /* Adding 20px margin around each card */
+}
