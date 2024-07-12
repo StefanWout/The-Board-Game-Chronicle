@@ -32,7 +32,7 @@ class Review(models.Model):
     )
     status = models.IntegerField(choices=STATUS, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
-    date_played = models.DateField(null=True)
+    date_played = models.DateField(null=True, help_text="MM/DD/YYY")
     game_duration = models.PositiveIntegerField(null=True, help_text="Game time in minutes")
     player_count = models.PositiveIntegerField(null=True)
 
