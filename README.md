@@ -105,7 +105,7 @@ Through the use of the kanban board functionality on github i was able to track 
 
 #1FC18E - Footer links
 
-!(https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/color%20scheme.png)
+![1](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/color%20scheme.png)
 
 The colours were selected with the intention of not pulling focus from the cards on the page.
 
