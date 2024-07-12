@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<h2>Add a Review of your Experience with:{{game}}</h2>
+<h2>Post a Review of your Experience with:{{game}}</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.media }}  <!-- This is for Summernote -->
