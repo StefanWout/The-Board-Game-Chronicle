@@ -4,7 +4,7 @@
 {% block content %}
     <body>
         <h1>{{ game.game_name }}</h1>
-        <p>{{ game.description }}</p>
+        <p>{{ game.description|safe }}</p>
         <p>{{ game.min_players }}
             -
             {{ game.max_players }}

@@ -6,7 +6,7 @@
 
 
     {% for review in reviews %}
-        <a type="button" class="btn btn-secondary" href="{% url 'review' review.id %}">{{ review.title }}
+        <a type="button" class="btn btn-secondary" href="{% url 'review' review.id %}">{{ review.game }} : {{ review.title }}
             :
             {{ review.rating }}
             / 5 stars</a>

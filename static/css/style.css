@@ -40,3 +40,6 @@ p {
     height: auto; /* Maintain aspect ratio */
 }
 
+.card-wrapper {
+    margin: 20px; /* Adding 20px margin around each card */
+}

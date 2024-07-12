@@ -10,8 +10,10 @@ from .forms import ReviewForm
 
 # Create your views here.
 
-class Index(TemplateView):
+class Index(ListView):
+    model = Game
     template_name = 'index.html'
+    context_object_name = 'games' 
 
 class Games(ListView):
     model = Game
