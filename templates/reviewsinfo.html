@@ -10,6 +10,7 @@
     <p>{{review.game_duration}} Mins</p>
     <p>{{review.player_count}} Players</p>
     <p>{{review.review_text|safe}}</p>
+    <p>{{review.date_played}}</p>
     <img src="{{ game.image }}" alt="game box" style="max-height: 20rem;" class="image-box">
 
     {% if user.is_authenticated and user.id == review.user.id %}

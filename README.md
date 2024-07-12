@@ -181,7 +181,7 @@ It allows users to stay connected with the The Board Game Chronicle on social me
 
 Database Design:
 
-![ERD]()
+![ERD](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Data%20Schema.png)
 
 
 Entity Relationship Diagrams (ERD) helped me understand the M in MVC framework much better. Despite not building on the comment model, having it included in the innitial planning will make it easier to implement in future. I used dbdiagram.io to create the diagram.

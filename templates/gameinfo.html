@@ -13,7 +13,9 @@
             {{ game.playing_time }}
             mins</p>
         <img src="{{ game.image }}" alt="game box" class="image-box">
+            {% if user.is_authenticated %}
             <a href="{% url 'add_review' %}" type="button" class="btn btn-primary">Post Review</a>
+            {% endif %}
             <h2>Previous Reviews</h2>
             <ul>
                 {% for review in reviews %}
