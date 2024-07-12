@@ -65,7 +65,7 @@ I need users to be able to track what they play at my cafe so that the data can 
 
 ## Wireframe & Initial Design:
 ### Home Page
-![1](url)
+![1](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Data%20Schema.png)
 
 ### (Logged in) Profile
 ![1](url)
