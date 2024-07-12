@@ -2,20 +2,31 @@
 {% load static %}
 <h1>hi there</h1>
 {% block content %}
+<div style="margin: 5rem; text-align: center; align-self: center;">
+<h1>Welcome to the Board Game Chronicle</h1>
+</div>
+<div style="margin: 5rem; text-align: center;">
+<h3>Our extensive library is at your disposal and you can track your experiences with these games by <a href="{% url 'account_signup' %}">Registering</a> and posting Reviews</h3>
+</div>    
 <div class="container mt-4">
-    <div class="row">
-    {% for game in games %}
-        <div class="card card-wrapper" style="width: 18rem;">
-            <img src="{{ game.image }}" class="card-img-top" alt="game-box">
-            <div class="card-body">
-              <h5 class="card-title">{{ game.game_name }}</h5>
-              <p class="card-text">{{ game.description|linebreaksbr|slice:":100" }}</p>
-              <p class="card-text">{{ game.min_players }} - {{ game.max_players }} Players</p>
-              <p class="card-text">Average time: {{ game.playing_time }} mins</p>
-              <a href="{% url 'game_detail' game.id %}" class="btn btn-primary">Learn More</a>
+        <div class="row" style="align-items: center;">
+            {% for game in games %}
+                <div class="card card-wrapper" style="width: 18rem;">
+                    <img src="{{ game.image }}" class="card-img-top" style="max-height: 20rem ;" alt="game-box">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ game.game_name }}</h5>
+                            <p class="card-text">{{ game.description|safe|linebreaksbr|slice:":100" }}</p>
+                            <p class="card-text">{{ game.min_players }}
+                                -
+                                {{ game.max_players }}
+                                Players</p>
+                            <p class="card-text">Average time:
+                                {{ game.playing_time }}
+                                mins</p>
+                            <a href="{% url 'game_detail' game.id %}" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
-    {% endfor %}
-    </div>
-    </div>    
-{% endblock %}
+    {% endblock %}
