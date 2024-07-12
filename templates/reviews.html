@@ -5,12 +5,23 @@
 {% block content %}
 
 <body>
-    <h1>Latest Reviews</h1>
-    <ul>
-        {% for review in reviews %}
-        <a type="button" class="btn btn-secondary" href="{{review.id}}">{{ review.game }} : {{ review.title }}</a>
-        {% endfor %}
-    </ul>
+    <div class="container mt-4">
+        <div class="row">
+            {% for review in reviews %}
+                <div class="card card-wrapper" style="width: 18rem;">
+                    <img src="{{ review.game.image }}" class="card-img-top" alt="game-box">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ review.game }} : {{review.title}}</h5>
+                            <p class="card-text">{{ review.rating }}<i class="fas fa-star"></i></p>
+                            <p class="card-text">{{ review.review_text|safe|linebreaksbr|slice:":100" }}</p>
+                            <a href="{{review.id}}" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
 </body>
 </html>
+
+
 {% endblock %}

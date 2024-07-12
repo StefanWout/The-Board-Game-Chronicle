@@ -4,13 +4,25 @@
 
 {% block content %}
 <!-- templates/games/game_list.html -->
-<body>
-    <h1>Game List</h1>
-    <ul>
+<div class="container mt-4">
+    <div class="row">
         {% for game in games %}
-        <a type="button" class="btn btn-secondary" href="{{game.id}}">{{ game.game_name }}</a>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+            <div class="card card-wrapper" style="width: 18rem;">
+                <img src="{{ game.image }}" class="card-img-top" alt="game-box">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ game.game_name }}</h5>
+                        <p class="card-text">{{ game.description|linebreaksbr|slice:":100" }}</p>
+                        <p class="card-text">{{ game.min_players }}
+                            -
+                            {{ game.max_players }}
+                            Players</p>
+                        <p class="card-text">Average time:
+                            {{ game.playing_time }}
+                            mins</p>
+                        <a href="{% url 'game_detail' game.id %}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
