@@ -277,7 +277,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | views.py | ![screenshot]![views py](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/views%20valid.png) | Pass: No Errors |
 | urls.py| ![screenshot]![urls py](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/urls%20valid.png) | Pass: No Errors |
 |  models.py | ![screenshot]![models py](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/models%20valid.png) | Pass: No Errors |
-|  game_data_load.py | ![screenshot]![game_data_load py](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/load%20game%20data%20script%20valid.png) | Pass: Errors are benign and too fiddly to worry about, ran the script once and it can be run again as way to add many games at once to the model |
+|  game_data_load.py | ![screenshot]![game_data_load py](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/load%20game%20data%20script%20valid.png) | Pass: Errors are benign and too fiddly to worry about, ran the script three times over the course of the build and it can be run again as way to add many games at once to the model (especially useful in the type of crisis where there is a need to change database management systems. Most of the content on the site is dependent on the information stored in the game model |
 
 # Responsiveness:
 Development tools were used to test responsiveness on varying sized devices including laptop, mobile and tablet size.
