@@ -68,7 +68,7 @@ I need users to be able to track what they play at my cafe so that the data can 
 ![1](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Home%20and%20Review%20page%20wireframe.png)
 
 ### (Logged in) Profile
-![1](url)
+![1]((https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/profile%20page.png))
 
 ### Post a Review
 ![Add a Review wireframe]()
