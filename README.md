@@ -1,17 +1,19 @@
 # The Board Game Chronicle
 
-(A board game cafe's platform to track played games and review the user experience for other users)
+(A board game cafe's platform to allow visitors and regulars to track played games and review the experience for other users)
 
 # Problem Statement:
 
-I need users to be able to track what they play at my cafe so that the data can be used to recomend games to new users.
+I need users to be able to track what they play at my cafe so that the data can be used to recommend games to new users.
 
 ## Target Audience: 
 
+- Board game cafe's looking to engage more with their customers
 - People who want to track their board gaming habits
+- Players looking for a recommendation
 - All age groups
 - Experienced and novice players
-- Players looking for a recommendation
+
 
 ## MVP Features:
 
