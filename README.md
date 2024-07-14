@@ -281,7 +281,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 |  models.py | ![screenshot]![models py](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/models%20valid.png)
  | Pass: No Errors |
  |  game_data_load.py | ![screenshot]![game_data_load py](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/load%20game%20data%20script%20valid.png)
- | Pass: No Errors |
+ | Pass: Errors to benign and fiddly to worry about, ran the script once and it can be run again as way to add many games at once to the model |
 
 # Responsiveness:
 Development tools were used to test responsiveness on varying sized devices including laptop, mobile and tablet size.
