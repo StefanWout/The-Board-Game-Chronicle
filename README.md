@@ -169,7 +169,7 @@ All the information found here, including the image were pulled from the boardga
 
 #### Footer:
 
-![footer]()
+![footer](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/footer.png)
 
 Links in the footer redirect to respective social media pages. 
 It allows users to stay connected with the The Board Game Chronicle on social media platforms, keeping them informed about any changes that may occur over time.
