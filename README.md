@@ -79,18 +79,22 @@ I need users to be able to track what they play at my cafe so that the data can 
 
 ### Review Detail Page (guest)
 
-![Review Details Wireframe]()
+![Review Details Wireframe](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/reveiw%20detail%20(guest).png)
 
 ### Review Detail Page (user)
 
-![Review Details Wireframe]()
+![Review Details Wireframe](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/reveiw%20detail%20(user).png)
 ### Games Page
 
-![Games Wireframe]()
+![Games Wireframe](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/games%20page.png)
 
-### Games Detail Page
+### Games Detail Page (guest)
 
-![Games Details Wireframe]()
+![Games Details Wireframe](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/games%20info%20page%20(guest).png)
+
+### Games Detail Page (user)
+
+![Games Details Wireframe](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/games%20info%20page%20(user).png)
 
 ## Agile:
 Through the use of the kanban board functionality on github i was able to track my progress and outline clear goals to make sure I was staying on track. With hindsight, I would have added more granularity to the board as many of the tasks listed could have been broken down further,
