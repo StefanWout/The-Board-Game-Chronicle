@@ -75,7 +75,7 @@ I need users to be able to track what they play at my cafe so that the data can 
 
 ### Reviews Page
 
-![Reviews Wireframe]()
+![Reviews Wireframe](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/reviews%20page.png)
 
 ### Review Detail Page
 
