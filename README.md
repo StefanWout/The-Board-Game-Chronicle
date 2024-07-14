@@ -110,7 +110,7 @@ Through the use of the kanban board functionality on github i was able to track 
 
 #780D0D - Header
 
-#D6D9D7 - Header Font
+#D6D9D7 - Header Font and main background
 
 #1FC18E - Footer links
 
