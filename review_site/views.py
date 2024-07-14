@@ -8,7 +8,6 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from .forms import ReviewForm
 
-# Create your views here.
 
 class Index(ListView):
     model = Game
@@ -33,7 +32,6 @@ class GameDetail(DetailView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # Add data from the Review model to the context
         context['reviews'] = Review.objects.filter(game=self.object)
         return context
 
@@ -81,14 +79,12 @@ class ProfileView(DetailView):
     context_object_name = 'profile'
 
     def get_object(self, queryset=None):
-        # Get the User object based on the 'pk' or 'slug' captured in the URL
         pk = self.kwargs.get('pk')
         return get_object_or_404(User, pk=self.kwargs['pk'])
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = self.object
-        # Add data from the Review model to the context
         context['reviews'] = Review.objects.filter(user=user)
         return context
 
@@ -121,7 +117,7 @@ class DeleteReview(DeleteView):
     context_object_name = 'review'
     
     def get_success_url(self):
-        user_pk = self.request.user.pk  # Get the current user's pk
+        user_pk = self.request.user.pk
         messages.success(self.request, 'Review deleted!')
         return reverse('profile', kwargs={'pk': user_pk})
     
