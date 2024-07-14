@@ -77,10 +77,13 @@ I need users to be able to track what they play at my cafe so that the data can 
 
 ![Reviews Wireframe](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/reviews%20page.png)
 
-### Review Detail Page
+### Review Detail Page (guest)
 
 ![Review Details Wireframe]()
 
+### Review Detail Page (user)
+
+![Review Details Wireframe]()
 ### Games Page
 
 ![Games Wireframe]()
