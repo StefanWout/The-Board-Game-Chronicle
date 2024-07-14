@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-<body>
     <h1>{{review.title}}</h1>
     <h2>{{review.game}}</h2>
     <h4>{{review.user}}</h4>
@@ -16,6 +15,4 @@
     {% if user.is_authenticated and user.id == review.user.id %}
     <a type="button" class="btn btn-primary" href="{% url 'edit_review' review.id %}">Edit</a>
     {% endif %}
-</body>
-</html>
 {% endblock %}

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <body>
+
         <h1>{{ game.game_name }}</h1>
         <p>{{ game.description|safe }}</p>
         <p>{{ game.min_players }}
@@ -22,6 +22,4 @@
                     <a type="button" class="btn btn-secondary" href="{% url 'review' review.id %}">{{ review.title }} : {{ review.rating }} / 5 stars</a>
                 {% endfor %}
             </ul>
-        </body>
-    </html>
 {% endblock %}
