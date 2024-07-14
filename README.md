@@ -99,7 +99,7 @@ I need users to be able to track what they play at my cafe so that the data can 
 ## Agile:
 Through the use of the kanban board functionality on github i was able to track my progress and outline clear goals to make sure I was staying on track. With hindsight, I would have added more granularity to the board as many of the tasks listed could have been broken down further,
 
-![project board]()
+![project board](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/project%20board.png)
 
 
 # Design Choices:
@@ -125,7 +125,7 @@ The default fonts provided ideal clarity
 ### Home Page:
 
 #### Navbar & Game Cards:
-![home]()
+![home](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Home%20page%20(user).png)
 
 The landing page provides an introduction to the website with a call to action giving a hint at how to go about using the site.
 
@@ -136,34 +136,34 @@ The navigation bar is valuable for users as it provides quick and easy access to
 
 Registration is simple and only requires the user to provde a username, email and password. This is so that future iterations of the site can include a tickbox asking permission to send news to the user. No further details are needed. 
 
-![signup]()
+![signup](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Registration%20page.png)
 
 
 
 #### Sign In:
 
-![sign-in]()
+![sign-in](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Sign%20in%20page.png)
 
 
 #### Reviews:
 
-![reviews]()
+![reviews](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/reviews%20page.png)
 
 
 #### Post a Review:
 
-![add a Review]()
+![add a Review](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/post%20review%20page.png)
 
 
 The form allows users to easily add the relevant information about their play session here. This data will allow future visitors to make an informed decision about what games to play based on prior experiences. 
 
 #### Games:
 
-![games]()
+![games](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/games%20page.png)
 
 #### Game Details:
 
-![game detail]()
+![game detail](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/games%20info%20page%20(user).png)
 
 All the information found here, including the image were pulled from the boardgamegeek.com open api and saved in the Game model. The python script ran once and pull all the data for the specific list of games in the cafe's library (games_data_load.py). Adding games to the model from the api would require a change in the list of games being called in the main function. The admin can add games manually as an alternative, especially if they disagree with the information provided by boardgamegeek.com. 
 
