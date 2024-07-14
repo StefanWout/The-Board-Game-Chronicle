@@ -3,12 +3,14 @@
 {% block content %}
     {% if user.is_authenticated %}
 
-<div style="margin: 5rem; text-align: center; align-self: center;">
-    <h1>Welcome back to the Board Game Chronicle</h1>
-    </div>
-    <div style="margin: 5rem; text-align: center;">
-    <h3>Our extensive library is at your disposal and you can track your experiences with these games by <a href="{% url 'add_review' %}">Posting Review</a></h3>
-</div>
+        <div style="margin: 5rem; text-align: center; align-self: center;">
+            <h1>Welcome back to the Board Game Chronicle</h1>
+        </div>
+        <div style="margin: 5rem; text-align: center;">
+            <h3>Our extensive library is at your disposal and you can track your experiences with these games by
+                <a href="{% url 'add_review' %}">Posting Review</a>
+            </h3>
+        </div>
     {% else %}
         <div style="margin: 5rem; text-align: center; align-self: center;">
             <h1>Welcome to the Board Game Chronicle</h1>
