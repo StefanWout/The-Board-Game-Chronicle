@@ -313,39 +313,36 @@ I can confirm that the site is responsive and looks as expected good on differen
 
 Mobile devices:
 
-![home]()
+![home](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20home.png)
 
-![home menu]()
+![games](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20games.png)
 
-![]()
+![gamesdetails](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20game%20details.png)
 
+![reviews]https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20reviews.png()
 
-![]()
+![reviewsdetails](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20review%20details.png)
 
-![]()
+![register](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20register.png)
 
-![]()
+![post review](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20post%20a%20review.png)
 
-![games details mobile]()
-
-![review details mobile]()
+![profile](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20profile.png)
 
 Tablet Devices:
 
 
 ![homepage]()
 
-![signup tablet]()
+![signup tablet](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/tablet%20register.png)
 
-![sign in tablet]()
+![reviews tablet](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/tablet%20reviews.png)
 
-![reviews tablet]()
+![tabletadd](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/tablet%20post%20a%20review.png)
 
-![tabletadd]()
+![games tablet](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/tablet%20games.png)
 
-![games tablet]()
-
-![games details tablet]()
+![games details tablet](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/tablet%20game%20details.png)
 
 
 
