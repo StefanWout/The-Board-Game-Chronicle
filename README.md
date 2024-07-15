@@ -289,15 +289,11 @@ Full testing was performed on the following devices:
 Laptops:
 
 * Acer Predator Triton 300 15.6-inch screen
-
-Monitors:
-
-* LG Flatron M2380D
   
  Mobile Devices:
 
-* Google Pixel 3a
-* Samsung Galaxy Tab S9 FE
+* Google Pixel 7
+* Samsung Galaxy Tab S9
 
  * Browser Compatibility:
  
@@ -305,8 +301,7 @@ Monitors:
 
 * Google Chrome
 
-![chrome]()
-
+![chrome](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Home%20page%20(user).png)
 
 * Mozilla Firefoz
 
@@ -318,22 +313,22 @@ I can confirm that the site is responsive and looks as expected good on differen
 
 Mobile devices:
 
-![Screenshot_20231207-234024]()
+![home]()
 
-![Screenshot_20231207-234033]()
+![home menu]()
 
-![Screenshot_20231207-234013]()
-
-
-![0]()
-
-![Screenshot_20231207-234117 (1)]()
-
-![Screenshot_20231208-000014]()
+![]()
 
 
+![]()
 
+![]()
 
+![]()
+
+![games details mobile]()
+
+![review details mobile]()
 
 Tablet Devices:
 
@@ -344,12 +339,13 @@ Tablet Devices:
 
 ![sign in tablet]()
 
-![books tablet]()
+![reviews tablet]()
 
 ![tabletadd]()
 
-![bookdetails tablet]()
+![games tablet]()
 
+![games details tablet]()
 
 
 
@@ -371,18 +367,21 @@ Books
 
 ![auditbooks](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/d6401b01-e4d5-4ed1-b8e9-ff6d5eeb4bd9)
 
-Add a book 
-![audit add book](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e429ee62-ecbe-4b2f-8521-28da15773a46)
+Post a Review 
+![add review](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e429ee62-ecbe-4b2f-8521-28da15773a46)
 
 On a mobile device:
 
 Home 
-![audit home mobile ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/348889e3-8c4e-41d4-b1c6-2c974780e23b)
+![home mobile ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/348889e3-8c4e-41d4-b1c6-2c974780e23b)
 
-Books
+Games
 ![auditbooks](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/fad662af-54da-45d0-b381-c0d70955e4e4)
 
-Add a book 
+Reviews
+![auditbooks](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/fad662af-54da-45d0-b381-c0d70955e4e4)
+
+Post a Review 
 ![audit addbookmobile](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/634965ca-1b9d-4aa1-bd17-bda89f9fbafe)
 
 
