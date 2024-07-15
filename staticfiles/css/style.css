@@ -4,6 +4,10 @@ mint - #1FC18E
 black - #171414
 white - #D6D9D7 */
 
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
 
 .navbar {
     background-color: #D6D9D7;
