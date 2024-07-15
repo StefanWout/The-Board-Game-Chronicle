@@ -241,6 +241,8 @@ Table gamesG {
 ## User Flow Chart:
 ![Flowchart](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/User%20flow%20chart.png)
 
+Double lines indicate connections to pages that only appear to registered users.
+
 The flowchart helped me track a user journey through the site, allowing me to be sure that they would have access to all fucntionality no matter where they ended up.
 
 # Validation
