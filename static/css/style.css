@@ -6,6 +6,7 @@ white - #D6D9D7 */
 
 * {
     overflow-x: none;
+    max-width: auto;
 }
 
 .navbar {
