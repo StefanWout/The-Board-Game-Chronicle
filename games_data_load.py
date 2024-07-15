@@ -2,11 +2,12 @@ import django
 import os
 import requests
 import xml.etree.ElementTree as ET
+from review_site.models import Game
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'board_game_chronicle.settings')
 django.setup()
 
-from review_site.models import Game
+
 
 def search_game(game_name):
     search_url = f"https://boardgamegeek.com/xmlapi/search?search={game_name}&exact=1"
@@ -59,21 +60,20 @@ def main():
     games = ["Shasn", "Gloomhaven", "King of Tokyo", "Kemet", "The Settlers of Catan", "Evolution: Climate", "Onitama", "Everdell", "Munchkin", "Dobble", "Trial by Trolley", "Hanabi", "Heat", "Scout", "Twilight Imperium: Fourth Edition", "Oath", "Wingspan", "Scythe", "Root", "Pandemic", "Azul", "Dominion", "Ticket to Ride", "Unmatched Game System", "Splendor", "Galaxy Trucker", "Cryptid", "Hive", "Dixit", "Love Letter"]
     data = []
     for game in games:
-        # Step 1: Search for the game 
         search_response = search_game(game)
 
-        # Parse the search response
+        
         games = parse_search_response(search_response)
 
         game_id = games[0]["id"]
 
-        # Step 2: Get details of the game 
+         
         game_details_response = get_game_details(game_id)
 
-        # Parse and display game details
+       
         game_details = parse_game_details(game_details_response)
         
-        # Save to the database
+        
         Game.objects.update_or_create(
             id=game_details['id'],
             defaults={

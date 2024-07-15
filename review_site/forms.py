@@ -10,7 +10,6 @@ class ReviewForm(forms.ModelForm):
         widgets = {'review_text': SummernoteWidget()}
 
     def __init__(self, *args, **kwargs):
-        super(ReviewForm,self).__init__(*args, **kwargs)
+        super(ReviewForm, self).__init__(*args, **kwargs)
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'form-control'
-
