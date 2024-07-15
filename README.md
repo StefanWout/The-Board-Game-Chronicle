@@ -319,7 +319,7 @@ Mobile devices:
 
 ![gamesdetails](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20game%20details.png)
 
-![reviews]https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20reviews.png()
+![reviews](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20reviews.png)
 
 ![reviewsdetails](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/mobile%20review%20details.png)
 
