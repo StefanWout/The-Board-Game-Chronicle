@@ -1,6 +1,6 @@
 # The Board Game Chronicle
 
-(A board game cafe's platform to allow visitors and regulars to track played games and review the experience for other users)
+(A board game cafe's platform to allow visitors and regulars to track played games and review their experiences for other users)
 
 # Problem Statement:
 
