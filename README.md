@@ -288,11 +288,16 @@ Full testing was performed on the following devices:
 
 Laptops:
 
-* Macbook Air 2018 13.3-inch screen
-* Lenovo Thinkpad 14" screen
+* Acer Predator Triton 300 15.6-inch screen
 
+Monitors:
+
+* LG Flatron M2380D
+  
  Mobile Devices:
-* Google Pixel 4a
+
+* Google Pixel 3a
+* Samsung Galaxy Tab S9 FE
 
  * Browser Compatibility:
  
@@ -300,12 +305,12 @@ Laptops:
 
 * Google Chrome
 
-![chrome](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/545ba4e5-c7bc-4fd8-8660-1444dcb3be2a)
+![chrome]()
 
 
-* Microsoft Edge
+* Mozilla Firefoz
 
-![microsoft edge](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/1570a9cd-6591-45db-840b-ecbe7f7aeb5b)
+![Firefox]()
 
 
 I can confirm that the site is responsive and looks as expected good on different screen sizes.
@@ -313,18 +318,18 @@ I can confirm that the site is responsive and looks as expected good on differen
 
 Mobile devices:
 
-![Screenshot_20231207-234024](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0f0b0d7d-a72f-43a4-8a57-bc1cf02a1367)
+![Screenshot_20231207-234024]()
 
-![Screenshot_20231207-234033](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/4c3cc202-b8f6-4f9d-b1bd-cf57c911db65)
+![Screenshot_20231207-234033]()
 
-![Screenshot_20231207-234013](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/39989e07-4e8d-4faf-8b57-e11686792b38)
+![Screenshot_20231207-234013]()
 
 
-![0](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/211095bf-ffac-42ca-b1c8-2a45d8444038)
+![0]()
 
-![Screenshot_20231207-234117 (1)](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e52d022b-d3fb-4f6c-8fcb-092386ce566b)
+![Screenshot_20231207-234117 (1)]()
 
-![Screenshot_20231208-000014](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0cd224f9-b46e-4db9-9260-999cc63fff90)
+![Screenshot_20231208-000014]()
 
 
 
@@ -333,17 +338,17 @@ Mobile devices:
 Tablet Devices:
 
 
-![homepage](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/5e6eb5c7-4aba-434c-8ed8-8bfd56632f8a)
+![homepage]()
 
-![signup tablet](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/c5f5a237-83ee-4ef3-b9b0-444f648ca225)
+![signup tablet]()
 
-![sign in tablet](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/9ac1d08b-d4b8-4aa5-a65b-e46040f3b60b)
+![sign in tablet]()
 
-![books tablet](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/a9c42d34-a49a-48ed-97ba-660c02de3543)
+![books tablet]()
 
-![tabletadd](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/b516d61d-6e21-460a-b7f4-5b18abf41d00)
+![tabletadd]()
 
-![bookdetails tablet](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/17a0f099-ae15-4b8a-887b-254beac2dbb0)
+![bookdetails tablet]()
 
 
 
@@ -415,49 +420,51 @@ Add a book
 
 
 # Tools and Technologies Used:
-The technologies implemented in this application included HTML5, CSS, Bootstrap, Python and Django.
+The technologies implemented in this application included HTML5, CSS, Bootstrap, Javascript, Python and Django.
 
 * Python used as the back-end programming language.
-* Git used for version control. (git add, git commit, git push)
+* JS used for the modal confirmation button on delete.
+* Git used for version control.
 * GitHub used for secure online code storage.
 * GitHub Pages used for hosting the deployed front-end site.
 * Gitpod used as a cloud-based IDE for development.
 * Bootstrap used as the front-end CSS framework for modern responsiveness and pre-built components.
-* ElephantSQL used as the Postgres database.
+* PostgreSQL used as the Postgres database.
 * Heroku used for hosting the deployed back-end site.
-* Cloudinary used for online static file storage.
-* Canva Utilized for collaborative design and prototyping(wireframes).
+
+
 
 * Google and Stack Overflow utilized for general research or solving a bug, information gathering, and various online tools.
 
 
 # Languages Used:
 * HTML5
+* Javascript
 * CSS
 * Python
 
 # Deployment :
 
-I used the steps used when deploying our django blog to deploy this application. The instructions for this mainly came from the follow along videos and text-steps provided on the code institute LMS.
+Previous Heroku deployments made this a simple process that encountered no issues
 
 # Bugs
 
-All the bugs that occured during the creation of this application have been resolved. There is a section of the application which allows you to reset your password that needs to be implemented, however they were not within the scope of this particular project and will be addressed in the near future along with the other future features.
+All the bugs were squashed. There are features missing like password resets and more to be added to the user model, however this is a solid foundation on which to build future features.
 
 
 # Credit: 
 
-* Although I used the django blog resources provided on the LMS, I also received alot of additional clarification by following along with django projects on YouTube. One of the vidoes I found especially helpful was : https://youtu.be/JzDBCZTgVyw?si=w3BBwJswUjBTm1xw
+* I used the django blog resources provided on the LMS to do the innitial set up.
 
-* Stack Overflow was used to solve any smaller bugs and further clarification on errors I was receiving in the terminal.
+* was used to solve any smaller bugs and further clarification on errors I was receiving in the terminal.
 
-* I used this site to generate a persona and created user stories: https://founderpal.ai/user-persona-generator
+* Thanks to my fellow students for their help.
 
-* A special thanks to all the other indivudals in our cohort for their continuous support throughout the course.
+* boardgamegeek.com provided the open API from which I sourced much of my data.
 
-* The added book covers and details were taken from the Waterstones Website.
+* A special thanks my friend Khalim for walking me through using Xml to write the script that pulled that data.
 
 * Font Awesome was used for icons and the fonts used were derived from Google Fonts.
 
-* Wireframes, logo and flowcharts were created using Canva. 
+* Wireframes, logo and flowcharts were created using Balsamiq and Gimp. 
 
