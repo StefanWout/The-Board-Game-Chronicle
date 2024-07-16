@@ -390,11 +390,14 @@ Post a Review
 
 | Link | Expected Outcome | Grade |
 | ------- | ---------------- | ----- |
-| Logo | Navigates to the home page when clicked | Fail |
-| Home | Navigates to the home page when clicked | Pass |
-| Books | Navigates to a book list  page when clicked | Pass |
-| Add a Book | Navigates to a form to add a book when clicked | Pass |
+| Logo | Navigates to the home page when clicked | Pass |
+| Games | Navigates to a Games list  page when clicked | Pass |
+| Games Detail | Navigates to a Games detail page when learn more is clicked | Pass
+| Reviews | Navigates to a Reviews list  page when clicked | Pass |
+| Reviews Detail | Navigates to a Reviews detail page when when all relevant buttons are clicked | Pass
+| Add a Review | Navigates to a form to add when all relevant buttons are clicked | Pass |
 | Register | Navigates to a registration form when clicked | Pass |
+| Profile | Navigates to a Profile page when clicked | Pass |
 | Log in | Navigates to a screen where users can log in when clicked | Pass |
 | Logout | Navigates to a page confirming for the user to log out | Pass |
 
@@ -410,7 +413,7 @@ Post a Review
 | Edit a review | A user can edit the details on the book that they have addded. It will update their addition on the books page | Pass | ![edit review ](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/delete%20modal.png)
 | Registration | New users can access a registration form from the "Register" link | Pass | ![testing sign up](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Registration%20page.png)
 | Log in | Users can log in using a form after clicking "Log in" | Pass | ![sign in testing ](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Sign%20in%20page.png)
-| Log out | Users get logged out after clicking "Log out" | Pass | ![testing sign out]()
+| Log out | Users get logged out after clicking "Log out" | Pass | ![testing sign out](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/logout%20page.png)
 | Functional buttons | Edit, delete, create buttons will be functional throughout the site | Pass | ![edit delete buttons](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/delete%20modal.png)
 | Footer | A footer displays social information | Pass | ![footer](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/footer.png)
 | Social links work | The social links will navigate to a new page when they're clicked. They will open in a new tab | Pass |
