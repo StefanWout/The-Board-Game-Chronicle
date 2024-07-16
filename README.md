@@ -69,6 +69,8 @@ I need users to be able to track what they play at my cafe so that the data can 
 ### Home Page and Review Page, innitial design ideation
 ![1](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Home%20and%20Review%20page%20wireframe.png)
 
+As the idea developed it became clear that keeping the design more streamlined would be more in line with the use cases outlined above.
+
 ### (Logged in) Profile
 ![1](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/profile%20page.png)
 
