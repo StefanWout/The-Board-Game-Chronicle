@@ -404,14 +404,14 @@ Post a Review
 | Feature | Expected Outcome | Grade | Screenshots |
 | ------- | ---------------- | ----- | --------- |
 | Modal | A message will appear asking to confirm if they want to delete | Pass | ![modal delete reveiw ](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/delete%20modal.png)
-| View Profile | Users can see the reviews they added | Pass | ![testing profile]([https://github.com/hiboibrahim/thebookbooth1/assets/144109298/01cc3a5b-db46-4742-a8e1-cf715d78c89b](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/profile%20page.png)
+| View Profile | Users can see the reviews they added | Pass | ![testing profile](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/profile%20page.png)
 | Add a review | Add a review | Pass | ![addreview](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/post%20review%20page.png)
-| Admin has access to crud functionality of all additions | Admin can edit or delete any book addition | Pass | ![admin testing]()
-| Edit a review | A user can edit the details on the book that they have addded. It will update their addition on the books page | Pass | ![edit book ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/79f6de7e-fd14-4c34-a474-483b7cd5285f)
-| Registration | New users can access a registration form from the "Register" link | Pass | ![testing sign up]([https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e9e6c4e1-c90a-4854-a11c-014a8fc80043](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Registration%20page.png))
-| Log in | Users can log in using a form after clicking "Log in" | Pass | ![sign in testing ]([https://github.com/hiboibrahim/thebookbooth1/assets/144109298/3fafee34-e6d6-4162-8989-faa78e1bf355](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Sign%20in%20page.png))
-| Log out | Users get logged out after clicking "Log out" | Pass | ![testing sign out](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/d7d377aa-fc2d-4025-a73e-22d2d81c622a)
-| Functional buttons | Edit, delete, create buttons will be functional throughout the site | Pass | ![edit delete buttons]()
+| Admin has access to crud functionality of all additions | Admin can edit or delete any book addition | Pass | ![admin testing](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/testing%20admin%20view.png)
+| Edit a review | A user can edit the details on the book that they have addded. It will update their addition on the books page | Pass | ![edit review ](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/delete%20modal.png)
+| Registration | New users can access a registration form from the "Register" link | Pass | ![testing sign up](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Registration%20page.png)
+| Log in | Users can log in using a form after clicking "Log in" | Pass | ![sign in testing ](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Sign%20in%20page.png)
+| Log out | Users get logged out after clicking "Log out" | Pass | ![testing sign out]()
+| Functional buttons | Edit, delete, create buttons will be functional throughout the site | Pass | ![edit delete buttons](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/delete%20modal.png)
 | Footer | A footer displays social information | Pass | ![footer](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/footer.png)
 | Social links work | The social links will navigate to a new page when they're clicked. They will open in a new tab | Pass |
 
