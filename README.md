@@ -358,28 +358,32 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 Home
 
-![homeaudit](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/5fa9bac2-d4bf-47fe-bb4a-50b3b0c4938b)
+![homeaudit](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/lighthouse%20desktop%20home.png)
 
-Books 
+Games 
 
-![auditbooks](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/d6401b01-e4d5-4ed1-b8e9-ff6d5eeb4bd9)
+![auditgames](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/lighthouse%20desktop%20games.png)
+
+Revies 
+
+![auditreviews](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/lighthouse%20desktop%20reviews.png)
 
 Post a Review 
-![add review](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e429ee62-ecbe-4b2f-8521-28da15773a46)
+![add review](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/lighthouse%20desktop%20add%20review.png)
 
 On a mobile device:
 
 Home 
-![home mobile ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/348889e3-8c4e-41d4-b1c6-2c974780e23b)
+![home mobile ](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/lighthouse%20mobile%20index.png)
 
 Games
-![auditbooks](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/fad662af-54da-45d0-b381-c0d70955e4e4)
+![auditgames](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/lighthouse%20mobile%20games.png)
 
 Reviews
-![auditbooks](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/fad662af-54da-45d0-b381-c0d70955e4e4)
+![auditreviews](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/lighthouse%20mobile%20reviews%20.png)
 
 Post a Review 
-![audit addbookmobile](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/634965ca-1b9d-4aa1-bd17-bda89f9fbafe)
+![audit addreviewmobile](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/lighthouse%20mobile%20add%20review%20.png)
 
 
 ## Links
@@ -399,20 +403,17 @@ Post a Review
 
 | Feature | Expected Outcome | Grade | Screenshots |
 | ------- | ---------------- | ----- | --------- |
-| Modal | A message will appear informing the user of a successful action | Pass | ![modal sign out ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/9e8658e8-f751-4cdf-be3d-ca19ad6c47b2)
-| User logged in | Text displays the user logged in with their username | Pass | ![modal sign in name](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/cc4a71db-9962-49c1-b4b6-563000687ad7)
-| View books | Users can see available books which have been added | Pass | ![testing books](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/01cc3a5b-db46-4742-a8e1-cf715d78c89b)
-| Add a book | Add a book to the book collection that will be available to borrow | Pass | ![addbook](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/82133f44-d43a-4f40-863a-f4e8970057aa)
-| Admin has access to crud functionality of all additions | Admin can edit or delete any book addition | Pass | ![admin testing](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/72df0b87-6d4f-4659-9d4f-5e986f88e16c)
-| Edit a book | A user can edit the details on the book that they have addded. It will update their addition on the books page | Pass | ![edit book ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/79f6de7e-fd14-4c34-a474-483b7cd5285f)
-| Delete a book | A user who added a book OR an admin can delete a book. It will then be deleted from the DB | Pass | ![delete book](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/88275723-e875-404a-b96f-58bac0a4907a)
-| Registration | New users can access a registration form from the "Register" link | Pass | ![testing sign up](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e9e6c4e1-c90a-4854-a11c-014a8fc80043)
-| Log in | Users can log in using a form after clicking "Log in" | Pass | ![sign in testing ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/3fafee34-e6d6-4162-8989-faa78e1bf355)
+| Modal | A message will appear asking to confirm if they want to delete | Pass | ![modal delete reveiw ](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/delete%20modal.png)
+| View Profile | Users can see the reviews they added | Pass | ![testing profile]([https://github.com/hiboibrahim/thebookbooth1/assets/144109298/01cc3a5b-db46-4742-a8e1-cf715d78c89b](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/profile%20page.png)
+| Add a review | Add a review | Pass | ![addreview](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/post%20review%20page.png)
+| Admin has access to crud functionality of all additions | Admin can edit or delete any book addition | Pass | ![admin testing]()
+| Edit a review | A user can edit the details on the book that they have addded. It will update their addition on the books page | Pass | ![edit book ](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/79f6de7e-fd14-4c34-a474-483b7cd5285f)
+| Registration | New users can access a registration form from the "Register" link | Pass | ![testing sign up]([https://github.com/hiboibrahim/thebookbooth1/assets/144109298/e9e6c4e1-c90a-4854-a11c-014a8fc80043](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Registration%20page.png))
+| Log in | Users can log in using a form after clicking "Log in" | Pass | ![sign in testing ]([https://github.com/hiboibrahim/thebookbooth1/assets/144109298/3fafee34-e6d6-4162-8989-faa78e1bf355](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/Sign%20in%20page.png))
 | Log out | Users get logged out after clicking "Log out" | Pass | ![testing sign out](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/d7d377aa-fc2d-4025-a73e-22d2d81c622a)
-| Grid display | A CSS grid will display the books in a clear, responsive format | Pass | N/A
-| Functional buttons | Edit, delete, create buttons will be functional throughout the site | Pass | ![edit delete buttons](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/67cfb78d-7d5b-4072-8aa8-812b9c444b67)
-| Footer | A footer displays social information | Pass | ![footer](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0879fada-18a4-4363-8257-0af0061cf79f)
-| Social links work | The social links will navigate to a new page when they're clicked. They will open in a new tab | Pass | ![footer](https://github.com/hiboibrahim/thebookbooth1/assets/144109298/0879fada-18a4-4363-8257-0af0061cf79f)
+| Functional buttons | Edit, delete, create buttons will be functional throughout the site | Pass | ![edit delete buttons]()
+| Footer | A footer displays social information | Pass | ![footer](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/footer.png)
+| Social links work | The social links will navigate to a new page when they're clicked. They will open in a new tab | Pass |
 
 
 # Tools and Technologies Used:
