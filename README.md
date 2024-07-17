@@ -307,7 +307,7 @@ Laptops:
 
 * Mozilla Firefoz
 
-![Firefox]()
+![Firefox](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/firefox%20home%20page.png)
 
 
 I can confirm that the site is responsive and looks as expected good on different screen sizes.
@@ -334,7 +334,7 @@ Mobile devices:
 Tablet Devices:
 
 
-![homepage]()
+![homepage](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/tablet%20home.png)
 
 ![signup tablet](https://github.com/StefanWout/The-Board-Game-Chronicle/blob/main/assets/tablet%20register.png)
 
