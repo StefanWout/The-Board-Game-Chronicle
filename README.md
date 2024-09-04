@@ -447,12 +447,132 @@ The technologies implemented in this application included HTML5, CSS, Bootstrap,
 
 # Deployment :
 
-Previous Heroku deployments made this a simple process that encountered no issues
+Local Deployment
+
+Follow these steps to deploy the application on your local machine:
+1. Clone the Repository
+
+First, clone the repository from GitHub to your local machine:
+
+git clone https://github.com/yourusername/the-board-game-chronicle.git
+cd the-board-game-chronicle
+
+2. Set Up a Virtual Environment
+
+Create a virtual environment to isolate your project dependencies:
+
+python3 -m venv venv
+
+Activate the virtual environment:
+
+venv\Scripts\activate
+
+On macOS/Linux:
+
+source venv/bin/activate
+
+3. Install Dependencies
+
+Install the necessary Python packages listed in the requirements.txt file:
+
+pip install -r requirements.txt
+
+4. Configure Environment Variables
+
+Create a .env file in the root directory to store environment variables:
+
+touch .env
+
+Add the following variables to the .env file:
+
+env
+
+DEBUG=True
+SECRET_KEY=your-secret-key
+DATABASE_URL=postgres://yourusername:yourpassword@localhost:5432/yourdbname
+
+Replace your-secret-key with a unique, random string and configure your local PostgreSQL database connection details.
+
+5. Set Up the Database
+
+Create a PostgreSQL database locally:
+
+Apply migrations to set up the database schema:
+
+6. Load Initial Data
+
+7. Run the Application
+
+# Deployment on Heroku :
+
+1. Prepare Your Project
+
+Before deploying, ensure your project is ready:
+
+Make sure your code is up to date and committed in Git.
+Ensure you have a Procfile in your project root, which might look like this:
+c
+web: gunicorn your_project_name.wsgi --log-file -
+
+2. Create a Heroku Account
+
+    Go to Heroku and sign up for an account (if you don't already have one).
+    Once signed in, click on the "New" button in the upper right corner and select "Create new app".
+
+3. Set Up Your Heroku App
+
+    App Name: Choose a unique name for your app.
+    Region: Select the region closest to your location.
+
+Click "Create app".
+4. Connect Your GitHub Repository
+
+In your app's Dashboard on Heroku, go to the "Deploy" tab.
+Under "Deployment method", select "GitHub".
+Connect to GitHub: Search for your repository and connect it.
+Automatic Deploys (Optional): Enable automatic deploys from the main branch if you want Heroku to deploy automatically whenever you push changes to GitHub.
+
+5. Deploy Your Application
+
+Scroll down to the "Manual deploy" section.
+Select the branch you want to deploy (usually main).
+Click "Deploy Branch".
+
+Heroku will now build and deploy your app.
+6. Set Environment Variables
+
+Go to the "Settings" tab. Click on "Reveal Config Vars".
+Add the following environment variables:
+SECRET_KEY = your-secret-key
+DEBUG = False
+ALLOWED_HOSTS = your-app-name.herokuapp.com
+
+Heroku automatically configures DATABASE_URL when you add the PostgreSQL add-on (done in the next step).
+7. Add a Database (Heroku Postgres)
+
+Still in the "Settings" tab, scroll down to the "Add-ons" section.
+Search for "Heroku Postgres" and select the free plan.
+
+This automatically sets up the DATABASE_URL for your app.
+8. Run Migrations
+
+To apply the migrations on Heroku:
+
+Go to the "More" dropdown in the upper right corner of the Dashboard.
+Select "Run Console".
+In the console, run:
+
+bash
+
+python manage.py migrate
+
+9. Open Your Application
+
+Once the deployment process is complete, click the "Open app" button on your Heroku Dashboard to view your live site.
 
 # Bugs
 
 All the bugs were squashed. There are features missing like password resets and more to be added to the user model, however this is a solid foundation on which to build future features.
-
 
 # Credit: 
 
