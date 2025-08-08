@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-stefanwout-theboardgame-cv01n1cpit7.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-stefanwout-theboardgame-cv01n1cpit7.ws.codeinstitute-ide.net', '.herokuapp.com', 'the-board-game-chronicle-8588bc8b62ba.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-stefanwout-theboardgame-cv01n1cpit7.ws.codeinstitute-ide.net',
